@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class JavaCup {
@@ -23,12 +24,17 @@ public class JavaCup {
         else { System.out.println("NO"); }
     }
     public static void temp() {
-        ArrayList a = new ArrayList();
+
+        int temp[] = new int[200000000];
+        int count = 0;
+
         for (int i = 0; i < 10000; i++)
         {
             for (int j = 0; j < 20000; j++) {
-                a.add(i + j);
+                temp[count++] = i + j;
             }
         }
+        ArrayList a = new ArrayList(Arrays.asList(temp));
+
     }
 }
